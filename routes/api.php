@@ -19,11 +19,11 @@ use App\Http\Controllers\SlackParamController;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
+
 Route::group([
     'namespace' => 'App\Http\Controllers'
 ], function () {
-    Route::get('/get-slack-param', [SlackParamController::class, 'getInfo']);
+    Route::get('/', [SlackParamController::class, 'getInfo']);
 
 });
-
 
