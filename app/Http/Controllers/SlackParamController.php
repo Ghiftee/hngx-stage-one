@@ -18,12 +18,13 @@ class SlackParamController extends Controller
         $currentUtcTime = Carbon::now('UTC');
         $currentUtcTime->addMinutes(2); 
         $currentUtcTime->subMinutes(2);
+        $currentUtcTimeFormatted = $currentUtcTime->toIso8601ZuluString();
         
 
         return response()->json([
             'slack_name' => $slackName,
             'current_day' => $currentDayOfWeek,
-            'utc_time' => $currentUtcTime->toDateTimeString(),
+            'utc_time' => $currentUtcTimeFormatted,
             'track' => $track,
             'github_file_url' => 'https://github.com/Ghiftee/hngx-stage-one/blob/main/app/Http/Controllers/SlackParamController.php',
             'github_repo_url' => 'https://github.com/Ghiftee/hngx-stage-one',
