@@ -18,7 +18,7 @@ class SlackParamController extends Controller
         $currentUtcTime = Carbon::now('UTC');
         $currentUtcTime->addMinutes(2); 
         $currentUtcTime->subMinutes(2);
-        $currentUtcTimeFormatted = $currentUtcTime->toIso8601ZuluString();
+        $currentUtcTimeFormatted = $currentUtcTime->toIso8601String();
         
 
         return response()->json([
