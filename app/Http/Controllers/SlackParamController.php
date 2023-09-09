@@ -22,11 +22,11 @@ class SlackParamController extends Controller
 
         return response()->json([
             'slack_name' => $slackName,
-            'current_day_of_week' => $currentDayOfWeek,
-            'current_utc_time' => $currentUtcTime->toDateTimeString(),
+            'current_day' => $currentDayOfWeek,
+            'utc_time' => $currentUtcTime->toDateTimeString(),
             'track' => $track,
-            'github_url_of_file' => 'https://github.com/Ghiftee/hngx-stage-one/blob/main/app/Http/Controllers/SlackParamController.php',
-            'github_url_of_source_code' => 'https://github.com/Ghiftee/hngx-stage-one',
+            'github_file_url' => 'https://github.com/Ghiftee/hngx-stage-one/blob/main/app/Http/Controllers/SlackParamController.php',
+            'github_repo_url' => 'https://github.com/Ghiftee/hngx-stage-one',
         ], 200);
 
     }
